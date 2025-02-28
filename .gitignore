@@ -8,9 +8,6 @@ __pycache__/
 # Ignore Django's migrations
 */migrations/
 
-# Ignore the database file (if using SQLite)
-db.sqlite3
-
 # Ignore IDE or editor specific files
 .vscode/
 .idea/
