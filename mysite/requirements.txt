@@ -1,4 +1,4 @@
-django==5.0.1
+django==4.0.1
 gunicorn==21.2.0
 djangorestframework==3.12.4
 python-decouple==3.4

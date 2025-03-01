@@ -9,9 +9,16 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
+# Set the database environment variable (example)
+ENV DB_NAME=your_database_name
+ENV DB_USER=your_database_user
+ENV DB_PASSWORD=your_database_password
+ENV DB_HOST=your_database_host
+ENV DB_PORT=5432
+
 # Install pip requirements
 COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+RUN python3 -m pip install -r requirements.txt
 
 WORKDIR /mysite
 COPY . /mysite
