@@ -14,3 +14,13 @@ __pycache__/
 
 # Ignore .env files for sensitive info
 .env
+
+# Ignore Docker-related files # Ignore data directory (database files, uploaded files, etc.)
+data/               
+.docker/
+
+# If you use overrides that are local to your setup
+docker-compose.override.yml 
+
+# Log files
+*.log                    

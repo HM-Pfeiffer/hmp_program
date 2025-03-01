@@ -1,10 +1,10 @@
-version: "3.8"
+# version: "3.8"
 services:
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./app/:/usr/src/app/
+      - ./mysite:/app
     ports:
       - 8000:8000
     environment:
@@ -24,7 +24,7 @@ services:
         POSTGRES_USER: ${DB_USER}
         POSTGRES_PASSWORD: ${DB_PASSWORD}
         POSTGRES_DB: ${DB_NAME}
-        POSTGRES_HOST_AUTH_METHOD: trust
+        # POSTGRES_HOST_AUTH_METHOD: trust
     ports:
         - "5432:5432"
     volumes:
@@ -37,9 +37,9 @@ services:
       environment:
           PGADMIN_DEFAULT_EMAIL: admin@example.com
           PGADMIN_DEFAULT_PASSWORD: admin123
-          PGADMIN_LISTEN_PORT: 5433
-          PGADMIN_CONFIG_SERVER_MODE: "False"
-          PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+          # PGADMIN_LISTEN_PORT: 5433
+          # PGADMIN_CONFIG_SERVER_MODE: "False"
+          # PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
       ports:
           - "5433:5433"
       depends_on:
