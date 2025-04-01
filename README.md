@@ -1,4 +1,4 @@
-# MySite Django Project
+# MySite 
 
 This is a Django-based web application that includes a `polls` app and is configured to run with Docker and PostgreSQL.
 
